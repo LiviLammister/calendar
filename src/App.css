@@ -26,3 +26,11 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.rbc-event {
+  padding: 2px 5px;
+  background-color: #3174ad;
+  border-radius: 0px;
+  color: #fff;
+  cursor: pointer;
+}

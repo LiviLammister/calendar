@@ -5,7 +5,7 @@ import moment from "moment";
 import "./App.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
-import CustomEvent from "./components/custom-event.jsx"
+import CustomEvent from "./components/custom-event"
 
 Calendar.setLocalizer(Calendar.momentLocalizer(moment));
 
@@ -37,9 +37,10 @@ class App extends Component {
           events={this.state.events}
           style={{ height: "100vh" }}
           selectable={true}
-          onDoubleClickEvent={event => console.log("doubleClicked!")}
           components={{
-            event: CustomEvent
+            month: {
+              event: CustomEvent
+            }
           }}
         />
       </div>
