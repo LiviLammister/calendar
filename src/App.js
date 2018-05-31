@@ -6,7 +6,6 @@ import "./App.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 import CustomEvent from "./components/custom-event"
-import CustomToolbar from "./components/custom-toolbar"
 import events from './events'
 
 Calendar.setLocalizer(Calendar.momentLocalizer(moment));
@@ -25,6 +24,7 @@ class App extends Component {
         <Calendar
           defaultDate={new Date()}
           defaultView="month"
+          views={["month"]}
           events={events}
           style={{ height: "100vh" }}
           selectable={true}
