@@ -1,19 +1,26 @@
 import React, { Component } from "react"
-import {Button, Popup} from "semantic-ui-react"
+import { Button, Divider, Popup } from "semantic-ui-react"
 
-const Event = (
-    <div>
-        Hello
-    </div>
-)
+const PopupStyle = {
+    backgroundColor: 'light grey'
+}
 
-const CustomEvent = () => (
-    <Popup trigger={Event} on='click' position='right'>
-      <Popup.Header>User Rating</Popup.Header>
-      <Popup.Content>
-        hello!
+const CustomEvent = (props) => {
+    console.log(props)
+    return(
+    <Popup
+        trigger={<Button content={props.title}/>}
+        on='click'
+        position='right'
+        size='large'
+        style={PopupStyle}
+    >
+        <Popup.Header>User Rating</Popup.Header>
+        <Divider />
+        <Popup.Content>
+            hello!
       </Popup.Content>
     </Popup>
-  )
+)}
 
 export default CustomEvent
